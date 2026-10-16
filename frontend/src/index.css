@@ -1,0 +1,305 @@
+/* ==========================================================================
+   Estilos Base — Sistema Profesor (SGA)
+   Prioridad: Accesibilidad (WCAG 2.1 AA), Contraste óptimo y Mobile-First
+   ========================================================================== */
+
+:root {
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #334155;
+  --color-border: #cbd5e1;
+
+  --color-primary: #025091;
+  --color-primary-hover: #013b6d;
+  --color-primary-contrast: #ffffff;
+
+  --color-success: #14532d;
+  --color-success-bg: #f0fdf4;
+  --color-success-border: #86efac;
+
+  --color-error: #7f1d1d;
+  --color-error-bg: #fef2f2;
+  --color-error-border: #fca5a5;
+
+  --focus-ring: 3px solid #025091;
+  --focus-offset: 3px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enlace para saltar al contenido principal (A11y) */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  z-index: 1000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+/* Contenedor centralizado y responsivo */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* Header */
+.app-header {
+  background-color: var(--color-surface);
+  border-bottom: 2px solid var(--color-border);
+  padding: 1.5rem 0;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.badge-institution {
+  display: inline-block;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.25rem;
+}
+
+.app-title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.header-subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+/* Contenido Principal */
+.main-content {
+  flex: 1;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  outline: none;
+}
+
+/* Tarjetas */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+/* Grilla de Estado */
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.875rem 1rem;
+}
+
+.status-label {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.status-value {
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+/* Botones (Accesibles con min 44px de alto) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.65rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Alertas */
+.alert {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin-top: 1rem;
+  border-left: 5px solid;
+}
+
+.alert-success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+  border-left-color: var(--color-success);
+}
+
+.alert-error {
+  background-color: var(--color-error-bg);
+  color: var(--color-error);
+  border-left-color: var(--color-error);
+}
+
+.details-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.details-text code,
+.hint-text code {
+  background-color: rgba(0, 0, 0, 0.08);
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.hint-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Lista de pasos */
+.step-list {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.step-list li {
+  color: var(--color-text-muted);
+}
+
+.step-list strong {
+  color: var(--color-text);
+}
+
+/* Footer */
+.app-footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: 1.5rem 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.footer-note {
+  font-size: 0.8125rem;
+  color: #64748b;
+}
+
+@media (min-width: 640px) {
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .footer-content {
+    text-align: left;
+  }
+}
