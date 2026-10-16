@@ -36,9 +36,13 @@
 | - *Migración inicial* | Migración `0001_initial` creada y aplicada en la base de datos. | Completada | 2026-10-16 |
 | - *Reglas de asistencia* | Enumeración cerrada (`PRESENTE`, `AUSENTE`, `TARDE`), tomas parciales válidas (R-ASI-02) y servicio de validación en `domain/attendance.py`. | Completada | 2026-10-16 |
 | - *Endpoints y Scope* | Vistas REST con autorización Zero Trust para comisiones (F1), nómina (F2), clases y observaciones (F5). | Completada | 2026-10-16 |
-| - *Pruebas unitarias* | Suite ampliada a 24 tests automatizados pasando en verde en pytest. | Completada | 2026-10-16 |
+| - *Pruebas unitarias* | Suite ampliada a 40 tests automatizados pasando en verde en pytest. | Completada | 2026-10-16 |
 | - *Persistencia Asistencia* | **DEC-017 se mantiene formalmente como cuestión institucional abierta** (sin forzar segunda fuente oficial). | Registrada | 2026-10-16 |
-| **Etapa 6 (Sesión 2)** | Integración de interfaces frontend para consulta de comisiones, nómina y observaciones | **Próxima a iniciar** | — |
+| **Sesión 2 (Etapa 6)** | **Integración de interfaces frontend y rediseño visual institucional** | **Completada** | 2026-10-16 |
+| - *Componentes y Vistas* | Selector de profesor, lista de comisiones (F1), nómina (F2), asistencia áulica (F3/F4) y observaciones (F5). | Completada | 2026-10-16 |
+| - *Accesibilidad y Estilo* | WCAG 2.1 AA, paleta `#163A63`, botones táctiles $\ge 44\text{px}$, foco visible y modo responsivo móvil. | Completada | 2026-10-16 |
+| **Documentación Equipo** | **Kit integral de documentación para el trabajo en equipo (`docs/equipo/`)** | **Completada** | 2026-10-16 |
+| - *Handbook & Guías* | Manual del sistema, guía de instalación en Windows, integración entre módulos y workflow de trabajo. | Completada | 2026-10-16 |
 | **Etapa 7** | Integración, pruebas y validación final | Bloqueada / No autorizada | — |
 
 ---
