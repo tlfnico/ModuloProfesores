@@ -1,10 +1,59 @@
-frontend/README.md
-spec.md
-backend/README.md
-docs/ARCHITECTURE.md
-docs/DECISIONS.md
-docs/PROGRESS.md
-docs/ROADMAP.md
-docs/architecture/ARCHITECTURE_OPTIONS.md
-docs/specs/README.md
-docs/specs/SPEC-002-modelo-dominio.md
+# ========================
+# Dependencias
+# ========================
+node_modules/
+
+# ========================
+# Entornos virtuales Python
+# ========================
+.venv/
+venv/
+env/
+
+# ========================
+# Archivos de entorno
+# ========================
+.env
+.env.local
+.env.*.local
+
+# ========================
+# Build y distribución
+# ========================
+dist/
+build/
+*.egg-info/
+
+# ========================
+# Cachés de Python
+# ========================
+__pycache__/
+*.pyc
+*.pyo
+
+# ========================
+# Cachés de herramientas
+# ========================
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ========================
+# Base de datos local
+# ========================
+db.sqlite3
+
+# ========================
+# IDE y editores
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ========================
+# Sistema operativo
+# ========================
+.DS_Store
+Thumbs.db

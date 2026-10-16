@@ -6,7 +6,7 @@ mediante include() cuando se implemente.
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from drf_spectacular.utils import OpenApiResponse, extend_schema
 from drf_spectacular.views import (
     SpectacularAPIView,
@@ -35,6 +35,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     # Health check
     path("api/health/", health_check, name="health-check"),
+    # API del Módulo Profesor
+    path("api/", include("apps.core.api.urls")),
     # Documentación OpenAPI (solo desarrollo)
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
